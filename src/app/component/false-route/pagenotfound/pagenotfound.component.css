@@ -1,0 +1,23 @@
+.errorTitle{
+font-size: 8em;
+text-align: center;
+color: #7D7D7D;
+}
+
+.errorSubTitle{
+    font-size: 2.6em;
+    text-align: center;
+    color: #696464;
+}
+
+.errorContent{
+    font-size: 1.2em;
+    text-align: center;
+    color: #696464;
+}
+
+.btn-home{
+    color: #FFF;
+    background: #7D7D7D;
+    border-radius: 20px;
+}

@@ -1,0 +1,176 @@
+<div class="container-fluid">
+
+    <div class="theme-blue-bg-color text-color p-2 mb-3">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-2">
+            Inventory Details
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 selectfield">
+                <mat-form-field appearance="fill">
+                    <input matInput type="text" placeholder="Name" [(ngModel)]="selectedItem">
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 selectfield">
+                <mat-form-field appearance="fill">
+                    <input matInput placeholder="Description" type="text" autocomplete="off"
+                        [(ngModel)]="selectedDescription">
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 selectfield">
+                <mat-form-field appearance="fill">
+                    <input matInput id="unit" name="unit" placeholder="unit" type="text" autocomplete="off"
+                        [(ngModel)]="selectedUnit" numbersOnly="true">
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 selectfield">
+                <mat-form-field appearance="fill">
+                    <input matInput id="Rate" name="Rate" placeholder="rate" type="text" autocomplete="off"
+                        [(ngModel)]="selectedRate" numbersOnly="true">
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                <button mat-raised-button id="add" name="add" class="theme-bg-color text-white m-auto custom-add-btn"
+                    type="button" (click)="addBillsItem()">Add</button>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <form [formGroup]="validateForm" (ngSubmit)="onSubmit(validateForm)">
+                <div class="table-responsive table-bordered table-sm">
+                    <table class="table table-bordered table-sm" style="table-layout: fixed;">
+                        <thead class="table-head">
+                            <tr class="text-center">
+                                <th style="padding: 0.25rem!important;">
+                                    Billing Item
+                                </th>
+
+                                <th style="padding: 0.25rem!important;">
+                                    Description
+                                </th>
+
+                                <th style="padding: 0.25rem!important;">
+                                    Unit
+                                </th>
+                                <th style="padding: 0.25rem!important;">
+                                    Rate
+                                </th>
+                                <th style="padding: 0.25rem!important;">
+                                    Discount
+                                </th>
+                                <th style="padding: 0.25rem!important;">
+                                    Amount
+                                </th>
+                                <th style="padding: 0.25rem!important;">
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody formArrayName="inventoryInfo" *ngIf="showFormArray">
+                            <tr class="border-bottom"
+                                *ngFor="let arrayitem of validateForm.get('inventoryInfo')?.controls; let pointindex = index"
+                                [formGroupName]="pointindex">
+                                <td style="padding: 0.25rem!important;" class="billselectfield p-1">
+                                    <mat-form-field appearance="fill">
+                                        <input matInput type="text" id="billingItem" name="billingItem"
+                                            formControlName="billingItem" autocomplete="off">
+
+                                    </mat-form-field>
+                                </td>
+
+                                <td style="padding: 0.25rem!important;" class="billselectfield p-1">
+                                    <mat-form-field appearance="fill">
+                                        <input matInput type="text" formControlName="description" autocomplete="off"
+                                            readonly>
+                                    </mat-form-field>
+                                </td>
+
+                                <td style="padding: 0.25rem!important;" class="billselectfield p-1">
+                                    <mat-form-field appearance="fill">
+                                        <input matInput type="text" id="unit" name="unit" formControlName="unit"
+                                            numbersOnly="true" autocomplete="off"
+                                            (input)="onInputUnit($event, pointindex)">
+                                    </mat-form-field>
+                                </td>
+                                <td style="padding: 0.25rem!important;" class="billselectfield p-1">
+                                    <mat-form-field appearance="fill">
+                                        <input matInput type="text" id="rate" name="rate" formControlName="rate"
+                                            numbersOnly="true" autocomplete="off"
+                                            (input)="onInputRate($event, pointindex)">
+                                    </mat-form-field>
+                                </td>
+                                <td style="padding: 0.25rem!important;" class="p-1">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 billselectfield">
+                                            <mat-form-field appearance="fill">
+                                                <input matInput type="text" id="discount" name="discount"
+                                                    numbersOnly="true" formControlName="discount" autocomplete="off"
+                                                    (input)="onInputDiscount($event, pointindex)">
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 selectfield">
+                                            <mat-form-field appearance="fill">
+                                                <mat-select class="text-color"
+                                                    (selectionChange)="selecteDiscountType($event.value, pointindex)"
+                                                    formControlName="discountType">
+                                                    <mat-option *ngFor="let item of discountType" [value]="item.name">
+                                                        {{item.name}}
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </td>
+                               
+                                <td style="padding: 0.25rem!important;" class="billselectfield p-1">
+                                    <mat-form-field appearance="fill">
+                                        <input matInput type="text" id="amount" name="amount" formControlName="amount"
+                                            numbersOnly="true" autocomplete="off" readonly>
+                                    </mat-form-field>
+                                </td>
+                                <td style="padding: 0.25rem!important;" class="text-center">
+                                    <span class="text-color fs-5 text-center pointer"
+                                        (click)="deleteBillsItem(pointindex)">
+                                        <i class="fas fa-trash-alt"></i></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody *ngIf="!showFormArray">
+                            <tr class="text-center">
+                                <td colspan="7">No Data Availabel</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="text-color theme-blue-bg-color p-2">
+        <div class="row">
+            <div class="col-lg-9 float-start position-relative">
+                <div class="float-start position-absolute bottom-0">
+                    <button mat-raised-button id="history" name="history" class="theme-bg-color text-white m-auto me-3"
+                        type="button" (click)="onClickSave()">Save</button>
+                </div>
+            </div>
+            <div class="col-lg-3 float-end table-responsive table-sm">
+                <table class="table table-bordered float-end">
+                    <tbody>
+                        <tr>
+                            <td class="p-1"> Total Payout </td>
+                            <td class="p-1"> {{totalPayout |currency:"INR"}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,438 @@
+@font-face {
+    font-family: AvenirLTProBook;
+    src: url("assets/fonts/AvenirLTProBook.eot");
+    src: local("?"), url("assets/fonts/AvenirLTProBook.woff") format("woff"), url("assets/fonts/AvenirLTProBook.ttf") format("truetype"), url("assets/fonts/AvenirLTProBook.svg#AvenirLTProBook") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    }
+.mat-body, .mat-body-1, .mat-typography, .mat-card, .mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6, .mat-list-item, .mat-h2, .mat-title, .mat-typography h2
+.mat-h5, .mat-typography h5, .mat-select,.mat-option,.mat-h2, .mat-title, .mat-typography h2, .mat-h1, .mat-headline, .mat-typography h1,
+.mat-h4, .mat-subheading-1, .mat-typography h4, .mat-button-toggle, .mat-button, .mat-raised-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button, .mat-fab, .mat-mini-fab,
+.mat-radio-button, .mat-tab-group, .mat-tab-label, .mat-tab-link, .mat-form-field, .mat-calendar, .mat-checkbox, .mat-menu-item 
+{
+    font-family: "AvenirLTProBook" !important;
+    letter-spacing: normal;
+    color: #888888;
+}
+// .mat-sidenav-container, .mat-sidenav-content, .mat-tab-body-content {
+//     transform: none !important;
+// }
+html, body { height: 100%;
+font-family: 'AvenirLTProBook' !important;
+}
+
+body { margin: 0;font-family: 'AvenirLTProBook' !important}
+
+/* custom css classes */
+.rounded-circle {width: 40px !important;height: 40px !important;}
+.pointer{
+    cursor: pointer !important;
+}
+.mat-select-value {
+    color: #888888 !important;
+}
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: black !important;
+}
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+    color: #888888;
+}
+.mat-option.mat-active {
+    background: rgba(0,0,0,.04);
+    color: #888888;
+}
+.text-color {
+    color: #888888;
+}
+.theme-bg-color {
+    background-color: #888888 !important;
+}
+.theme-blue-bg-color {
+    background-color:  #F5FBFF;;
+}
+.theme-border-color {
+    border: 1px solid #888888 !important;
+}
+.ft-thick {
+    font-weight: bold !important;
+}
+.cancel-btn {
+    background-color: #adadad !important;
+}
+.mat-form-field{width: 100%;}
+.height-100{height: 100vh;}
+
+h2{ font-size:28px !important; line-height: 34px;}
+
+.custom-add-btn {
+    height: 90%;
+    width: 100%;
+    line-height: 80%;
+}
+
+// search field
+.searchfield .mat-form-field-appearance-fill .mat-form-field-underline::before {background-color: white !important;}
+.searchfield .mat-form-field-ripple, .mat-form-field.mat-focused{ background-color:white !important;}
+.searchfield .mat-form-field-underline{ display: none;}
+.searchfield .mat-form-field-wrapper{ padding-bottom: 0rem;}
+.searchfield .mat-form-field.mat-focused{  background-color: white !important;}
+//.searchfield .mat-form-field-appearance-fill .mat-form-field-infix {padding: 0px !important}
+.searchfield .mat-form-field-appearance-fill .mat-form-field-flex{ 
+    border-radius: 0 !important;
+     background-color: white;
+     padding: 0px !important;
+    }
+.mat-ripple-element{ background: none !important;}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+    color: #888888 !important;
+    padding-top: 5px !important;
+}
+.mat-form-field-label {
+    color: #888888 !important;
+}
+
+// login field
+.formfield .mat-form-field-appearance-fill .mat-form-field-underline::before {background-color: transparent;}
+.formfield .mat-form-field-ripple, .mat-form-field.mat-focused{ background-color:transparent;}
+.formfield .mat-form-field-underline{ display: none;}
+.formfield .mat-form-field-wrapper{ padding-bottom: 0rem;}
+.formfield .mat-form-field.mat-focused{ border-left: 5px solid #707070; background-color:#F5FBFF; box-shadow: 0px 5px 12px #00000029;}
+.formfield .mat-form-field-appearance-fill .mat-form-field-flex{ border-radius: 0 !important;}
+.formfield .mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 4px 4px 0 0;
+    padding: 0.65em 0.65em 0.65rem 0.65em;
+}
+.field .mat-form-field-appearance-fill .mat-form-field-underline::before {background-color: transparent;}
+.field .mat-form-field-ripple, .mat-form-field.mat-focused{ background-color:transparent;}
+.field .mat-form-field-underline{ display: none;}
+.field .mat-form-field.mat-focused{ border-left: 5px solid #707070; background-color:#F5F5F5 !important; box-shadow: 0px 5px 12px #00000029;}
+.field .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    padding-bottom: 0rem;
+}
+.field .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: 0.5rem 0 !important;
+}
+
+.field .mat-form-field {
+    background-color: #F5F5F5;
+    padding: 0.3rem;
+}
+
+// date field
+.datefield .mat-form-field-appearance-fill .mat-form-field-underline::before {background-color: white !important;}
+.datefield .mat-form-field-ripple, .mat-form-field.mat-focused{ background-color:white !important;}
+.datefield .mat-form-field-underline{ display: none;}
+.datefield .mat-form-field-wrapper{ 
+    padding-bottom: 0rem;
+    height: 2rem !important;
+}
+.datefield .mat-form-field.mat-focused{  background-color: white !important;}
+.datefield .mat-form-field-appearance-fill .mat-form-field-flex{ 
+    border-radius: 0 !important;
+     background-color: white;
+     border: 1px #bbbbbb solid !important;
+     color: #888888;
+     border-radius: 5px !important;
+    }
+.datefield .mat-form-field-appearance-fill .mat-form-field-infix {
+    padding: 0px !important;
+    border: 0px;
+    line-height: 0rem;
+}
+.datefield .mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 4px 4px 0 0;
+    padding: 0 0.35em 0 0.35em;
+    height: 2rem !important;
+}
+.datefield .mat-icon-button {
+    padding: 0;
+    min-width: 0;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    height: 2rem !important;
+}
+
+.selectfield .mat-form-field-appearance-fill .mat-form-field-underline::before {background-color: white !important;}
+.selectfield .mat-form-field-ripple, .mat-form-field.mat-focused{ background-color:white !important;}
+.selectfield .mat-form-field-underline{ display: none;}
+.selectfield .mat-form-field-wrapper{ padding-bottom: 0rem;}
+.selectfield .mat-form-field.mat-focused{  background-color: white !important;}
+.selectfield .mat-form-field-appearance-fill .mat-form-field-flex{ 
+    border-radius: 0 !important;
+     background-color: white;
+     border: 1px #bbbbbb solid !important;
+     color: #888888;
+     border-radius: 5px !important;
+    }
+.selectfield .mat-form-field-appearance-fill .mat-form-field-infix {
+    border: unset;
+    padding: 0.2rem !important;
+    line-height: 1rem !important;
+}
+.selectfield .mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 4px 4px 0 0;
+    padding: 0.25em 0.35em 0.25em 0.35em;
+}
+.selectfield .mat-select-value {
+    color: #888888;
+}
+.selectfield .mat-form-field {
+    color: #888888 !important;
+    background-color: white !important;
+}
+.selectfield .mat-select-arrow-wrapper {
+    padding-top: 0.8rem;
+}
+.selectfield .mat-autocomplete-panel .mat-option {
+    font-size: 0.8rem !important;
+    height: 28px !important;
+}
+.selectfield .mat-option:hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled) {
+    background: rgba(0,0,0,.04);
+    height: 30px !important;
+}
+
+
+
+// bill managment
+.billselectfield .mat-form-field-appearance-fill .mat-form-field-underline::before {background: none !important;}
+.billselectfield .mat-form-field-ripple, .mat-form-field.mat-focused{ background-color:white !important;}
+.billselectfield .mat-form-field-underline{ display: none;}
+.billselectfield .mat-form-field-wrapper{ padding-bottom: 0rem;}
+.billselectfield .mat-form-field.mat-focused{  background: none !important;}
+.billselectfield .mat-form-field-appearance-fill .mat-form-field-flex{ 
+    background: none !important;
+     border: unset!important;
+     color: #888888;
+    }
+.billselectfield .mat-form-field-appearance-fill .mat-form-field-infix {padding: 2px !important}
+.billselectfield .mat-form-field-appearance-fill .mat-form-field-flex {
+   border: unset !important;
+    padding: 0.25em 0.35em 0.25em 0.35em;
+    text-align: center !important;
+}
+.billselectfield .mat-select-value {
+    color: #888888;
+}
+.billselectfield .mat-form-field {
+    color: #888888 !important;
+    background: none !important;
+}
+.billselectfield .mat-form-field-infix {
+    padding: 0px !important;
+    border: unset !important;
+}
+
+.toggleapt .mat-button-toggle-label-content {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    display: inline-block !important;
+    line-height: 20px !important;
+    padding: 0 5px !important;
+    position: relative !important;
+    font-size: 13px !important;
+}
+.toggleapt .mat-button-toggle-standalone, .mat-button-toggle-group {
+    position: relative !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    border-radius: 8px !important;
+-webkit-tap-highlight-color: transparent !important;
+}
+
+.toggleapt .mat-button-toggle-checked {
+    background-color: #e0e0e0 !important;
+    color: black !important;
+    font-weight: bold !important;
+}
+
+.mat-progress-bar-fill::after {
+    background-color: #000000 !important;
+}
+
+.mat-progress-bar-buffer {
+    background: #888888 !important;
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #888888 !important;
+}
+
+
+.mat-nav-list .mat-list-item:focus,
+.mat-action-list .mat-list-item:focus,
+.mat-list-option:focus .active .svg-icon :focus {
+  background-color: unset !important;
+}
+
+.mat-nav-list .mat-list-item:hover,
+.mat-action-list .mat-list-item:hover,
+.mat-list-option:hover .active .svg-icon :hover {
+  background-color: unset !important;
+}
+
+
+.mat-nav-list a.active {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mat-nav-list a .menu {
+    margin-bottom: 0rem !important;
+    font-size: 0.80rem !important;
+}
+
+.mat-nav-list a.active .svg-icon {
+    background: #888888;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-bottom: 0.3rem;
+    margin: auto;
+}
+.svg-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-bottom: 0.3rem;
+    margin: auto;
+}
+
+.mat-nav-list a .svg-icon i {
+    color: #888888 !important;
+}
+
+.mat-nav-list a.active .svg-icon i {
+    color: white !important;
+}
+
+// .mat-nav-list a .svg-icon svg path {
+//     fill: #888888 !important;
+// }
+// .mat-nav-list a.active .svg-icon svg path {
+//     fill: white !important;
+// }
+
+.table-head {
+    background-color: #F5FBFF !important;
+    color: #888888 !important;
+}
+
+.table-head th {
+    padding: 1rem !important;
+    font-weight: normal !important;
+}
+.table-data td {
+    border: 1px solid #E5E5E5 !important;
+    padding: 1rem !important;
+}
+
+.font-16{ font-size: 16px;}
+.font-14{ font-size: 14px;}
+
+::-webkit-scrollbar {
+   
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.table-responsive {
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+}
+.mat-dialog-container { 
+ -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+.mat-tab-body-content {
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+}
+.mat-dialog-content {
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+}
+.mat-drawer-container {
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+}
+.mat-drawer-content {
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+}
+.mat-drawer { 
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+}
+
+.mat-drawer-inner-container {
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+}
+
+.patient-title{ color: #707070; font-weight: bold; text-transform: lowercase;}
+.mobile-title  {
+    color: #707070; text-transform: lowercase;
+}
+.patient-title:first-letter {text-transform: uppercase}
+.border-right{border-right: 1px solid #E5E4E9; padding-right: 0.5rem; margin-right: -0.5rem;}
+.border-left{border-left: 1px solid #E5E4E9; padding-left: 0.5rem; margin-left: -0.5rem;}
+.table>:not(caption)>*>*{ padding: 1rem 0.5rem;}
+
+td {
+    white-space: nowrap;
+   }
+.status-li li { list-style-type: none;}
+.align-middle{ font-size: 16px; line-height: 22px;}
+.align-middle tr{vertical-align: middle;}
+.px-75{ padding-left: 1rem !important; padding-right: 1rem !important;}
+.py-75{ padding-top: 1rem !important; padding-bottom: 1rem !important;}
+
+/* Styles for the active tab label */
+.mat-tab-label {background-color: transparent;/* background-color: lightgray; */}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {border-color: #888888 !important;}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+background-color: #888888 !important;}
+
+// .lef-scrollbar{ direction: inherit !important; resize: none !important; max-width: 100%; max-height: 86%; scrollbar-width: thin; width: auto; box-sizing: border-box !important;
+// position: relative; display: block; scrollbar-color: #fff #fff; overflow-y: scroll ;}
+// .lef-scrollbar:hover {scrollbar-color: #f5f5f5 #fff;}
+// .mat-drawer-content{overflow-y: scroll; scrollbar-color: #f5f5f5 #fff; scrollbar-width: thin;}
+// .mat-drawer-inner-container{ overflow: hidden !important;}
+.fix-toolbar img{ width: 4.75rem;}
+.mat-tab-label.mat-tab-label-active {
+    font-weight: bold !important;
+ }
+
+.mat-toolbar.mat-primary {
+    background: #888888;
+    color: #fff;
+}
+
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+    background-color: #888888;
+}
+
+.mat-button.mat-primary, .mat-icon-button.mat-primary, .mat-stroked-button.mat-primary {
+    color: #888888;
+}
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: #888888 !important;
+}
+
+

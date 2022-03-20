@@ -1,0 +1,127 @@
+mat-sidenav{box-shadow: 0px 0px 6px  #00000029;  border-radius: 0; border: none !important;}
+
+.fs-12 {
+    font-size: 12px !important;
+}
+.img-size {
+    width: 20px; height: 20px;
+}
+.imgsize {
+    width: 30px; height: 30px;
+}
+.chart-icon {
+    background-color: #EBF9EA;
+    color: #2EC114;
+}
+.black {
+    background-color: black !important;
+}
+.rightNavWd {
+    width: 240px !important;
+}
+.leftNavWd {
+    width: 130px !important;
+}
+
+.fix-toolbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem;
+    background-color: #FCFCFC !important;
+}
+.mat-list-base .mat-list-item, .mat-toolbar-row, .mat-toolbar-single-row{ height: auto;}
+
+
+ /* Small devices (landscape phones, 320px and up) */
+ @media (min-width: 320px) and (max-width:575px) { 
+    .doctortitle {
+        font-size: 1.5rem !important;
+    }
+    .clinictitle {
+        font-size: 0.85rem !important;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width:767px) { 
+
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width:991px){ 
+    .menulist ol{
+        font-size: 12px !important;
+    }
+    .menulist ol li{
+        margin-right: 10px !important;
+    }
+    .mat-nav-list a .mat-icon{
+      
+        font-size: 16px !important;
+    }
+    .mat-nav-list a span{
+      
+        font-size: 13px !important;
+    }
+    .rightNavWd {
+        width: 200px !important;
+    }
+    .leftNavWd {
+        width: 100px !important;
+    }
+    h4 {
+        font-size: 0.75rem !important;
+    }
+    .doctortitle {
+        font-size: 1.5rem !important;
+    }
+    .clinictitle {
+        font-size: 1rem !important;
+    }
+      
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width:1024px) { 
+    .menulist ol{
+        font-size: 15px !important;
+    }
+    .mat-nav-list a .mat-icon{
+      
+        font-size: 17px !important;
+    }
+    .mat-nav-list a span{
+      
+        font-size: 13px !important;
+    }
+    .rightNavWd {
+        width: 200px !important;
+    }
+    .leftNavWd {
+        width: 100px !important;
+    }
+    .doctortitle {
+        font-size: 1.5rem !important;
+    }
+    .clinictitle {
+        font-size: 1rem !important;
+    }
+    .toggle-button {
+        display: none !important;
+    }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1025px) { 
+    .doctortitle {
+        font-size: 1.5rem !important;
+    }
+    .clinictitle {
+        font-size: 1rem !important;
+    }
+    .toggle-button {
+        display: none !important;
+    }
+ }
